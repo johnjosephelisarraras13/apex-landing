@@ -888,6 +888,12 @@ function Audience() {
 }
 
 function About() {
+  const stats = [
+    { v: 4, prefix: "", suffix: "", label: "KIDS, FRONT ROW" },
+    { v: 6, prefix: "", suffix: "", label: "AI ENGINE LAYERS" },
+    { v: 15, prefix: "", suffix: "", label: "HRS / WEEK TARGET" },
+    { v: 1, prefix: "$", suffix: "M", label: "YEAR-2 OUTCOME" },
+  ];
   return (
     <section style={{ position: "relative", padding: "120px 24px", maxWidth: "920px", margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: "60px" }}>
@@ -895,10 +901,10 @@ function About() {
           <Eyebrow>WHO BUILT THIS</Eyebrow>
         </Reveal>
         <Reveal delay={120}>
-          <SerifTitle italic size={56} style={{ margin: "24px auto 0", maxWidth: "780px" }}>
-            JJ. <span style={{ color: C.gold }}>Finance closer.</span> Father of 4.
+          <SerifTitle italic size={56} style={{ margin: "24px auto 0", maxWidth: "820px" }}>
+            I&apos;m JJ. <span style={{ color: C.gold }}>Million-dollar producer.</span>
             <br />
-            Quietly building his exit in public.
+            Father of 4 who&apos;s missing all of it.
           </SerifTitle>
         </Reveal>
       </div>
@@ -926,10 +932,10 @@ function About() {
               opacity: 0.4,
             }}
           >
-            \u201C
+            &ldquo;
           </div>
           <p style={{ fontFamily: C.serif, fontStyle: "italic", fontSize: "clamp(17px, 1.8vw, 22px)", color: C.cream, lineHeight: 1.6, margin: "0 0 24px" }}>
-            I made $230K a year and sat in my truck for 40 extra minutes on a Friday because I couldn&apos;t face the disappointment on my 7-year-old&apos;s face one more time. That was the night APEX was born. Not from a vision board. From a parking lot.
+            I&apos;ve seen my kids 2.5 days this week. Gone before they wake up. Back after they&apos;re asleep. $30,000 a month and I&apos;m still not there. They&apos;re making memories. I&apos;m making money. APEX is what I&apos;m building so I can be in the photos again — for Saturday laughs. For sick days. For sports. For school pickup at 3:15.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "24px", borderTop: `1px solid ${C.border}` }}>
             <div
@@ -951,7 +957,7 @@ function About() {
             </div>
             <div>
               <div style={{ fontFamily: C.sans, fontSize: "14px", fontWeight: 600, color: C.cream }}>JJ Elisarraras</div>
-              <div style={{ fontFamily: C.mono, fontSize: "9px", letterSpacing: "2px", color: C.textMuted }}>FOUNDER · APEX</div>
+              <div style={{ fontFamily: C.mono, fontSize: "9px", letterSpacing: "2px", color: C.textMuted }}>FOUNDER · APEX · BUILDING HIS WAY OUT</div>
             </div>
           </div>
         </div>
@@ -959,12 +965,7 @@ function About() {
 
       <Reveal delay={400} style={{ marginTop: "48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px" }}>
-          {[
-            { v: 4, prefix: "", suffix: "", label: "Kids who notice" },
-            { v: 230, prefix: "$", suffix: "K", label: "F&I salary" },
-            { v: 6, prefix: "", suffix: "", label: "AI engine layers" },
-            { v: 1, prefix: "$", suffix: "M", label: "Target by year 2" },
-          ].map((s, i) => (
+          {stats.map((s, i) => (
             <div
               key={i}
               style={{
@@ -986,10 +987,29 @@ function About() {
           ))}
         </div>
       </Reveal>
+
+      <Reveal delay={520} style={{ marginTop: "40px", textAlign: "center" }}>
+        <a
+          href={SCORECARD_URL}
+          style={{
+            display: "inline-block",
+            fontFamily: C.mono,
+            fontSize: "11px",
+            color: C.gold,
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+            textDecoration: "none",
+            paddingBottom: "4px",
+            borderBottom: `1px solid ${C.gold}40`,
+            transition: "all 0.2s",
+          }}
+        >
+          See where you actually stand →
+        </a>
+      </Reveal>
     </section>
   );
 }
-
 function Products() {
   const tiers = [
     {
